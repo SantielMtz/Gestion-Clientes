@@ -1,0 +1,16 @@
+name: Notificar Actualización de Cliente
+
+on:
+  push:
+    paths:
+      - 'clientes/**'  # Se ejecuta cuando se modifica un archivo en clientes/
+    branches:
+      - main  
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar notificación
+        run: echo "✏️ Se ha actualizado la información de un cliente existente."
