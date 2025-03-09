@@ -1,0 +1,12 @@
+name: Notificar Consulta de Cliente
+
+on:
+  workflow_dispatch:  # Se ejecuta manualmente desde GitHub
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar notificación
+        run: echo "👀 Se ha consultado la información de un cliente."
