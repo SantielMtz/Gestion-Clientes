@@ -1,0 +1,16 @@
+name: Notificar Nuevo Cliente
+
+on:
+  push:
+    paths:
+      - 'clientes/**'  # Se ejecuta cuando se sube un archivo en la carpeta clientes/
+    branches:
+      - main  # Solo se activa en la rama principal
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar notificación
+        run: echo "🚀 Se ha creado un nuevo cliente en el sistema."
